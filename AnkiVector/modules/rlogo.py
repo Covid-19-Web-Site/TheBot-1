@@ -42,7 +42,7 @@ async def logo(client, message):
     fname = "Sally.png"
     img.save(fname, "png")
     await mritzme.edit(logogend, disable_web_page_preview=True)
-    await client.send_photo(message.chat.id, photo=murl, caption = f"**Made By @NipunGroupBot ⚡️**")
+    await client.send_photo(message.chat.id, photo=murl, caption = f"**Made By @NipunGroupBot 🌹**")
     if os.path.exists(fname):
             os.remove(fname)
  except Exception as e:
@@ -71,7 +71,7 @@ async def hqlogo(client, message):
     fname = "Sally.png"
     img.save(fname, "png")
     await mritzme.edit(logogend, disable_web_page_preview=True)
-    await client.send_photo(message.chat.id, photo=murl, caption = f"**Made By @NipunGroupBot ⚡️**")
+    await client.send_photo(message.chat.id, photo=murl, caption = f"**Made By @NipunGroupBot 🌹**")
     if os.path.exists(fname):
             os.remove(fname)
  except Exception as e:
@@ -138,7 +138,7 @@ async def catlogo(client, message):
     fname = "catub_byAV.png"
     img.save(fname, "png")
     await mritzme.edit(logogend, disable_web_page_preview=True)
-    await client.send_photo(message.chat.id, photo=murl, caption = f"**Made By @NipunGroupBot⚡️**")
+    await client.send_photo(message.chat.id, photo=murl, caption = f"**Made By @NipunGroupBot⚡ 🌹**")
     if os.path.exists(fname):
             os.remove(fname)
  except Exception as e:
@@ -152,4 +152,4 @@ HELPSTRINGS = """
  """
 __help__ = HELPSTRINGS
 __funtools__ = HELPSTRINGS
-__mod_name__ = "🔅 Logo Maker 🔅"
+__mod_name__ = "🌹Logo Maker🌹"
