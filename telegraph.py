@@ -1,11 +1,11 @@
 import os
 
 from pyrogram import filters
-from telegraph import upload_file
-from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
+from Sinderella import pbot as app
 from Sinderella.helper_extra.fsub import ForceSub
 
-from Sinderella import pbot as app
+from telegraph import upload_file
 
 
 @app.on_message(filters.command(["telegraph", "tm"]))
@@ -47,14 +47,15 @@ async def telegraph(client, message):
         await message.reply(
             f"**Uploaded To [Telegraph](https://telegra.ph{response[0]})**\n\n**POWERD BY @TeamSinderella**",
             reply_markup=InlineKeyboardMarkup(
-            [
                 [
-                    InlineKeyboardButton(
-                        "••Telegraph Link••", url="https://telegra.ph{}".format(response[0])
-                    )
+                    [
+                        InlineKeyboardButton(
+                            "••Telegraph Link••",
+                            url="https://telegra.ph{}".format(response[0]),
+                        )
+                    ]
                 ]
-            ]
-          ),
+            ),
             disable_web_page_preview=False,
         )
     finally:

@@ -1,12 +1,9 @@
-import html
 import importlib
-import json
 import re
 import time
 import traceback
 from sys import argv
 from typing import Optional
-from pyrogram import Client
 
 from telegram import (
     Chat,
@@ -41,7 +38,6 @@ from AnkiVector import (
     CERT_PATH,
     DONATION_LINK,
     LOGGER,
-    OWNER_ID,
     PORT,
     SUPPORT_CHAT,
     TOKEN,
@@ -72,11 +68,17 @@ PM_START_TEXT = f"""
 
 buttons = [
     [
-        InlineKeyboardButton(text="📌Updates Channel", url="https://t.me/TheSallyUpdates"),
-        InlineKeyboardButton(text="🖲 Support Group", url="https://t.me/TheSallySupport"),
+        InlineKeyboardButton(
+            text="📌Updates Channel", url="https://t.me/TheSallyUpdates"
+        ),
+        InlineKeyboardButton(
+            text="🖲 Support Group", url="https://t.me/TheSallySupport"
+        ),
     ],
     [
-        InlineKeyboardButton(text="👨‍💻 Developer", url="https://telegram.dog/NiupunDinujaya"),
+        InlineKeyboardButton(
+            text="👨‍💻 Developer", url="https://telegram.dog/NiupunDinujaya"
+        ),
         InlineKeyboardButton(text="❔ Help", callback_data="help_back"),
     ],
     [
@@ -87,7 +89,9 @@ buttons = [
 ]
 
 
-ANKIVECTOR_STICKER = "CAACAgUAAxkBAAEHylhiEyqeq57OgVAg4XhPb0zR24yCbwAC_AQAAjQSoFSeT9MdI1FElSME"
+ANKIVECTOR_STICKER = (
+    "CAACAgUAAxkBAAEHylhiEyqeq57OgVAg4XhPb0zR24yCbwAC_AQAAjQSoFSeT9MdI1FElSME"
+)
 
 HELP_STRINGS = f"""
 *Main Commands :* 🤖
@@ -227,7 +231,7 @@ def start(update: Update, context: CallbackContext):
                 PM_START_TEXT,
                 reply_markup=InlineKeyboardMarkup(buttons),
                 parse_mode=ParseMode.MARKDOWN,
-            )            
+            )
     else:
         update.effective_message.reply_text(
             "I'm awake already!\n<b>Haven't slept since:</b> <code>{}</code>".format(
@@ -243,12 +247,10 @@ def error_handler(update, context):
     tb_list = traceback.format_exception(
         None, context.error, context.error.__traceback__
     )
-    tb = "".join(tb_list)
+    "".join(tb_list)
 
     # Build the message with some markup and additional information about what happened.
-    message = (
-        "An exception was raised while handling an update\n"
-    )
+    message = "An exception was raised while handling an update\n"
 
     if len(message) >= 4096:
         message = message[:4096]
@@ -853,6 +855,7 @@ def main():
         telethn.run_until_disconnected()
 
     updater.idle()
+
 
 if __name__ == "__main__":
     LOGGER.info("Successfully loaded modules: " + str(ALL_MODULES))

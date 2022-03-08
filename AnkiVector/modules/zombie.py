@@ -93,7 +93,9 @@ async def zombies(event):
                     EditBannedRequest(event.chat_id, user.id, BANNED_RIGHTS)
                 )
             except ChatAdminRequiredError:
-                await cleaning_zombies.edit("I Don't Have Ban Rights In This Group. Please Promote Me.")
+                await cleaning_zombies.edit(
+                    "I Don't Have Ban Rights In This Group. Please Promote Me."
+                )
                 return
             except UserAdminInvalidError:
                 del_u -= 1
