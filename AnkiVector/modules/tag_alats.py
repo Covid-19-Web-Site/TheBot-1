@@ -4,13 +4,13 @@ import dateparser
 from pymongo import MongoClient
 from pyrogram import filters
 from pyrogram.types import ChatPermissions, InlineKeyboardButton, InlineKeyboardMarkup
-from Sinderella import MONGO_DB_URI, pbot
+from AnkiVector import MONGO_DB_URI, pbot
 
 # from innexia.services.mongo2 import db
 # client = MongoClient()
 
 client = MongoClient(MONGO_DB_URI)
-dbd = client["Sinderella"]
+dbd = client["AnkiVector"]
 approved_users = dbd.approve
 db = dbd
 
@@ -325,16 +325,15 @@ Here is the solution
 If you are tagged/mentioned in a group where Anki Vector is present
 Anki Vector will notify it to you via private message after enabling tag alerts
 
-╔Commands (only work on bot inbox)
-╠ `/tagalert on` : Turn tag alerts on
-╚ `/tagalert off` : Turn tag alert off
+Commands (only work on bot inbox)
+ `/tagalert on` : Turn tag alerts on
+`/tagalert off` : Turn tag alert off
 
-*Example:*
-__If you are mentioned in a group Anki Vector will tell you who mentioned you, message that you are tagged in and which group is that.__
+CREDITS : @TheAnkiVectorBot
 """
 
 __help__ = HELPSTRINGS
 __funtools__ = HELPSTRINGS
 __basic_cmds__ = HELPSTRINGS
 __advtools__ = HELPSTRINGS
-__mod_name__ = "🔅 Tag Alert 🔅"
+__mod_name__ = "🌹Tag Alert🌹"
