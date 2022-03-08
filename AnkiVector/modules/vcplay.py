@@ -1,7 +1,7 @@
 __help__ = """
 First Add [Sally Music Bot](t.me/TheSallyMusicBot) Your Group.. [Click Here For Add Sally Music Bot](t.me/TheSallyMusicBot?startgroup=true)
-Next Add [Sally Music Assistant](t.me/TheSallyAssistant) Your Group... 
-Give All Admin Permision For @TheSallyMusicBot And @TheSallyAssistant..
+Next Add [Sally Music Assistant](t.me/TheSallyAssistant) Or [Sally Music Assistant 1](t.me/TheSallyAssistant1) Your Group... 
+Give All Admin Permision For @TheSallyMusicBot And Music Assistant..
 Open VC And Send /play Command For Play Music..
 [Translate To Sinhala](t.me/TheSallySupport/14)
 
